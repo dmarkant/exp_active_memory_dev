@@ -1,0 +1,10 @@
+<h1>Here are all your users in the database</h1>
+
+{% for person in participants: %}
+	{{ person.workerid }} &nbsp; 
+    {{ person.email }} &nbsp; 
+    {{ person.date.strftime('%Y-%m-%d') }} &nbsp; 
+    {{ person.retest_date.strftime('%Y-%m-%d') }} &nbsp; 
+    {{ person.retest_link }}<br>
+
+{% endfor %}

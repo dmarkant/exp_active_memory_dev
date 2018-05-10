@@ -1,0 +1,23 @@
+<h1>Retest</h1>
+<table>
+    <tr>
+        <th>Participant ID</th>
+        <th>Email</th>
+        <th>Date tested</th>
+        <th>Date for retest</th>
+        <th>Retest link</th>
+        <th>Retest in DB?</th>
+    </tr>
+
+    {% for person in participants: %}
+    <tr>
+        <td>{{ person.workerid }}</td>
+        <td>{{ person.email }}</td> 
+        <td>{{ person.test_date.strftime('%Y-%m-%d') }}</td>
+        <td>{{ person.retest_date.strftime('%Y-%m-%d') }}</td>
+        <td>{{ person.retest_link }}</td>
+        <td>{{ person.retest_in_db }}</td>
+   </tr>
+    {% endfor %}
+</table>
+
